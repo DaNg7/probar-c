@@ -1,29 +1,40 @@
-
+using namespace std;
 #include "stdio.h"
 #include "iostream"
-
-int main() {
-  	int x[100]={};
+	int x[100]={};
   	int a=1;
   	int b=1;
   	int l=1;
+int main() {
+  
   	
   	
-  	for(int i;i<16;i++){
+  	for(int i=0;i<8;i++){
 	  a+=b;
-	  b  =a;
+	  b=a;
 	  x[i]=a;
-      a+=l;
-	  l=a;
-	   printf("el valor del array es %d \n",a)	;
-	    
-   // for (int d=1;d<i;d++){
-   // printf("el valor del array es %d \n",x[d])	;
-  	
-  	
-  //  }
- 
+	  if (a==b){
+	    i++;
+	    a+=l;
+	    l=a;
+	    x[i]=a;
+	  }
+    
   }
+  	
+	int g = suma()	;
+    printf("el valor del array es %d \n",g);
   	
 }
  
+ 
+ int suma(){
+ 
+    for(int d=0;d<8;d++){
+     int v;
+     v +=	x[d];
+   return v;
+   
+   
+    }
+}
